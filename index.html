@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siempre es Hoy</title>
+  <style>
+    :root {
+      --violeta: #a287f4;
+      --rosa-palo: #e6b2c6;
+      --blanco-calido: #fefbf5;
+      --dorado-suave: #d4af37;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--blanco-calido);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--violeta);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .subtitulo {
+      font-size: 1.2rem;
+      color: var(--rosa-palo);
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    nav {
+      background-color: var(--blanco-calido);
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--violeta);
+      font-weight: bold;
+    }
+
+    .espiral {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, var(--dorado-suave) 10%, transparent 10.5%),
+                  radial-gradient(circle, var(--dorado-suave) 10%, transparent 10.5%);
+      background-size: 20px 20px;
+      animation: giro 10s linear infinite, fadeIn 2s ease-in-out;
+      border-radius: 50%;
+      margin: 20px auto;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+      line-height: 1.6;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--violeta);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--rosa-palo);
+    }
+
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .floating-buttons a {
+      background-color: var(--dorado-suave);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes giro {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="espiral"></div>
+    <h1>Siempre es Hoy</h1>
+    <p class="subtitulo">Conectando el ahora con alma, presencia y propósito</p>
+  </header>
+
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy guía en procesos de transformación interior a través del bienestar, la energía y la conciencia. Conectamos desde el alma para expandir tu ser y vivir en presencia.</p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <p>✨ Meditaciones guiadas personalizadas<br>
+       🌬️ Sesiones de respiración consciente<br>
+       🧠 Mindset y bienestar emocional con apoyo de IA<br>
+       💫 Acompañamientos espirituales 1:1</p>
+  </section>
+
+  <section id="agenda">
+    <h2>Agenda tu sesión</h2>
+    <p>Elegí el día y horario que mejor resuene con vos. Te acompaño en este viaje interior con amor y presencia. Agenda disponible vía WhatsApp o formulario de contacto.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu email" required>
+      <textarea rows="4" placeholder="Tu mensaje o intención"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <div class="floating-buttons">
+    <a href="https://wa.me/" target="_blank" title="WhatsApp">📱</a>
+    <a href="#" target="_blank" title="Instagram">💖</a>
+  </div>
+</body>
+</html>
